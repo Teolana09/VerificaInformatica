@@ -51,10 +51,10 @@ namespace VerificaInformatica
                 {
                     p = p + parola[r];
                 }
-                listParole.Items.Add(parole[i]);
+                listParole.Items.Add(p[i]);
                 using (StreamWriter sw = new StreamWriter("paroleDecifrate.txt"))
                 {
-                    sw.Write(parola);
+
                 }
             }
         }
