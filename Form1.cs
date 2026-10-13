@@ -3,7 +3,7 @@ namespace VerificaInformatica
     public partial class Form1 : Form
     {
         List<string> parole = new List<string>();
-        string alfabeto = "abcdefghijklmnopqrstuvxyz";
+        string alfabeto = "ABCDEFGHIJKLMNOPQRSTUWXYZ";
         public Form1()
         {
             InitializeComponent();
@@ -52,6 +52,10 @@ namespace VerificaInformatica
                     p = p + parola[r];
                 }
                 listParole.Items.Add(parole[i]);
+                using (StreamWriter sw = new StreamWriter("paroleDecifrate.txt"))
+                {
+                    sw.Write(parola);
+                }
             }
         }
 
